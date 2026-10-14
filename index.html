@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio profissional de Éder Venâncio. Gestão de TI, TOTVS Protheus, SQL Server e sistemas empresariais.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Éder Venâncio | Tecnologia e Gestão de TI</title>
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111c2e;
+      --text: #edf3fc;
+      --muted: #a7b5ca;
+      --accent: #65d6ad;
+      --border: #26364b;
+      --width: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--width), 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 18, 32, .94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -.4px;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero { padding: 105px 0 90px; }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 18px 0;
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #071a15;
+      border-color: var(--accent);
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    section { padding: 66px 0; }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: -1px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      color: var(--muted);
+      margin: 0 0 30px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .about p { color: var(--muted); }
+
+    .panel, .project, .skill {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .panel { padding: 24px; }
+
+    .panel h3 { margin-top: 0; }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .tag {
+      padding: 6px 11px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project {
+      padding: 25px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .project:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .project-number {
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 800;
+    }
+
+    .project h3 { margin: 12px 0 8px; }
+
+    .project p { color: var(--muted); }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .skill { padding: 20px; }
+
+    .skill h3 { margin-top: 0; }
+
+    .skill p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .contact {
+      padding: 34px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .contact p { color: var(--muted); }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px 0;
+        gap: 12px;
+      }
+
+      .nav-links { gap: 14px; }
+      .hero { padding: 70px 0 55px; }
+      .about, .projects, .skills {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 45px 0; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio">Éder Venâncio<span>.</span></a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#competencias">Competências</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="eyebrow">Tecnologia • Gestão • Negócios</div>
+      <h1>Conectando tecnologia às <span>necessidades do negócio.</span></h1>
+      <p>
+        Profissional de Tecnologia da Informação com atuação em gestão de TI,
+        sistemas empresariais, ERP TOTVS Protheus, SQL Server e evolução de
+        processos corporativos.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="#projetos">Conheça meus projetos</a>
+        <a class="button" href="#contato">Entre em contato</a>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about">
+        <div>
+          <div class="eyebrow">Sobre mim</div>
+          <h2 class="section-title">Tecnologia com visão de negócio.</h2>
+          <p>
+            Atuo como Supervisor de TI no Grupo Nissey, trabalhando com
+            sustentação e evolução de sistemas empresariais, infraestrutura,
+            fornecedores e demandas alinhadas às necessidades operacionais.
+          </p>
+          <p>
+            Minha experiência envolve o ERP TOTVS Protheus, SQL Server,
+            atualizações de sistemas, adequações fiscais e análise de
+            problemas técnicos. Busco integrar conhecimento técnico,
+            organização e visão de negócio para desenvolver soluções
+            consistentes e sustentáveis.
+          </p>
+          <p>
+            Tenho interesse em gestão de tecnologia, evolução de sistemas
+            empresariais, dados e melhoria contínua de processos.
+          </p>
+        </div>
+
+        <aside class="panel">
+          <h3>Áreas de atuação</h3>
+          <div class="tag-list">
+            <span class="tag">Gestão de TI</span>
+            <span class="tag">TOTVS Protheus</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">ERP</span>
+            <span class="tag">Infraestrutura</span>
+            <span class="tag">Integrações</span>
+            <span class="tag">Processos fiscais</span>
+            <span class="tag">Fornecedores</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="container">
+        <div class="eyebrow">Experiência aplicada</div>
+        <h2 class="section-title">Projetos em destaque</h2>
+        <p class="section-intro">
+          Estudos de caso sobre desafios técnicos e operacionais.
+          Os detalhes serão ampliados conforme cada projeto for documentado.
+        </p>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project-number">PROJETO 01</div>
+            <h3>Evolução do ERP TOTVS Protheus</h3>
+            <p>
+              Atuação em demandas de atualização do ERP, diagnóstico de
+              problemas técnicos e avaliação de necessidades de relatórios
+              e ferramentas de apoio à operação.
+            </p>
+            <div class="tag-list">
+              <span class="tag">ERP</span>
+              <span class="tag">Sustentação</span>
+              <span class="tag">Diagnóstico</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">PROJETO 02</div>
+            <h3>SQL Server e análise de dados</h3>
+            <p>
+              Consultas para análise de informações de estoque e custos,
+              considerando relacionamentos entre tabelas, agregações e
+              consistência dos resultados.
+            </p>
+            <div class="tag-list">
+              <span class="tag">SQL Server</span>
+              <span class="tag">Consultas SQL</span>
+              <span class="tag">Dados</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">PROJETO 03</div>
+            <h3>Adequações fiscais em sistemas</h3>
+            <p>
+              Participação em demandas de evolução de configurações e
+              processos fiscais no ERP, incluindo atividades relacionadas
+              às mudanças da legislação tributária.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Protheus</span>
+              <span class="tag">Processos fiscais</span>
+              <span class="tag">Homologação</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">PROJETO 04</div>
+            <h3>Diagnóstico de falhas de integração</h3>
+            <p>
+              Análise de falhas na geração de arquivos de integração,
+              investigação técnica com equipes de desenvolvimento e
+              avaliação de alternativas de correção.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Integrações</span>
+              <span class="tag">Análise técnica</span>
+              <span class="tag">Sistemas</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competencias">
+      <div class="container">
+        <div class="eyebrow">Conhecimentos profissionais</div>
+        <h2 class="section-title">Competências</h2>
+        <p class="section-intro">
+          Conhecimentos e áreas de atuação que fazem parte da minha
+          experiência profissional.
+        </p>
+
+        <div class="skills">
+          <article class="skill">
+            <h3>Gestão de TI</h3>
+            <p>
+              Gestão de demandas, relacionamento com fornecedores,
+              sustentação operacional e alinhamento com as áreas de negócio.
+            </p>
+          </article>
+          <article class="skill">
+            <h3>Sistemas empresariais</h3>
+            <p>
+              ERP TOTVS Protheus, atualização de ambientes, processos
+              corporativos e análise de incidentes.
+            </p>
+          </article>
+          <article class="skill">
+            <h3>Dados e infraestrutura</h3>
+            <p>
+              SQL Server, consultas SQL, infraestrutura de TI e
+              acompanhamento de ambientes tecnológicos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <div class="contact">
+          <div class="eyebrow">Vamos conversar</div>
+          <h2 class="section-title">Conecte-se comigo</h2>
+          <p>
+            Estou aberto a conexões profissionais, troca de conhecimentos
+            e oportunidades relacionadas à gestão de TI e sistemas empresariais.
+          </p>
+          <!-- Substitua o endereço abaixo pelo seu perfil real -->
+          <a class="button primary"
+             href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer">
+            Meu LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Éder Venâncio · Portfólio profissional
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
