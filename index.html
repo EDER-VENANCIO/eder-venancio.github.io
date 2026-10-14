@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio profissional de Éder Venâncio. Gestão de TI, TOTVS Protheus, SQL Server e sistemas empresariais.">
+  <meta name="description" content="Portfólio técnico de Éder Venâncio: TOTVS Protheus, SQL Server, Python, APIs REST, ADVPL, dados e infraestrutura.">
   <meta name="theme-color" content="#0b1220">
-  <title>Éder Venâncio | Tecnologia e Gestão de TI</title>
+  <title>Éder Venâncio | Sistemas, Dados e Integrações</title>
 
   <style>
     :root {
@@ -231,6 +231,89 @@
       font-size: .85rem;
     }
 
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      align-items: center;
+      gap: 42px;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      margin: auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    }
+
+    .code-preview {
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #080e18;
+    }
+
+    .code-preview summary {
+      cursor: pointer;
+      padding: 11px 14px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .code-preview pre {
+      margin: 0;
+      padding: 16px;
+      overflow-x: auto;
+      border-top: 1px solid var(--border);
+      color: #dce8f7;
+      font-size: .82rem;
+      line-height: 1.55;
+      white-space: pre;
+    }
+
+    .code-note {
+      color: var(--muted);
+      font-size: .82rem;
+      margin: 10px 0 0;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 12px 15px;
+      font-weight: 700;
+    }
+
+    .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+
+    .placeholder-note {
+      color: var(--muted);
+      font-size: .85rem;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 720px) {
+      .hero-layout { grid-template-columns: 1fr; }
+      .profile-photo { width: 155px; height: 155px; }
+    }
+
     @media (max-width: 720px) {
       nav {
         align-items: flex-start;
@@ -266,16 +349,27 @@
 
   <main>
     <section class="hero container" id="inicio">
-      <div class="eyebrow">Tecnologia • Gestão • Negócios</div>
-      <h1>Conectando tecnologia às <span>necessidades do negócio.</span></h1>
-      <p>
-        Profissional de Tecnologia da Informação com atuação em gestão de TI,
-        sistemas empresariais, ERP TOTVS Protheus, SQL Server e evolução de
-        processos corporativos.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="#projetos">Conheça meus projetos</a>
-        <a class="button" href="#contato">Entre em contato</a>
+      <div class="hero-layout">
+        <div>
+          <div class="eyebrow">Sistemas • Dados • Integrações</div>
+          <h1>Tecnologia aplicada a <span>problemas reais.</span></h1>
+          <p>
+            Profissional de Tecnologia da Informação com experiência em sistemas empresariais,
+            análise de dados, integrações e infraestrutura. Atuação com TOTVS Protheus,
+            SQL Server, Python, APIs REST e automação de processos.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#projetos">Conheça meus projetos</a>
+            <a class="button" href="#contato">Entre em contato</a>
+          </div>
+        </div>
+        <img
+          class="profile-photo"
+          src="assets/foto-perfil.png"
+          alt="Foto de perfil de Éder Venâncio"
+          width="200"
+          height="200"
+        />
       </div>
     </section>
 
@@ -283,12 +377,11 @@
       <div class="container about">
         <div>
           <div class="eyebrow">Sobre mim</div>
-          <h2 class="section-title">Tecnologia com visão de negócio.</h2>
+          <h2 class="section-title">Sistemas, dados e soluções técnicas.</h2>
           <p>
-            Atuo na supervisão de Tecnologia da Informação, conectando sistemas empresariais,
-            infraestrutura, fornecedores e demandas das áreas de negócio. Minha rotina
-            combina sustentação operacional, análise técnica, priorização de demandas
-            e busca por melhorias nos processos.
+            Atuo com tecnologia aplicada a ambientes empresariais, conectando sistemas, dados,
+            infraestrutura e necessidades operacionais. Minha experiência envolve análise
+            técnica, resolução de problemas, sustentação de sistemas e melhoria de processos.
           </p>
           <p>
             Minha experiência envolve o ERP TOTVS Protheus, SQL Server,
@@ -298,22 +391,22 @@
             consistentes e sustentáveis.
           </p>
           <p>
-            Tenho interesse em gestão de tecnologia, evolução de sistemas
-            empresariais, dados e melhoria contínua de processos.
+            Tenho interesse em desenvolvimento de soluções, integração de sistemas, análise de dados
+            e automação, mantendo o foco em resultados práticos e confiabilidade técnica.
           </p>
         </div>
 
         <aside class="panel">
           <h3>Áreas de atuação</h3>
           <div class="tag-list">
-            <span class="tag">Gestão de TI</span>
             <span class="tag">TOTVS Protheus</span>
             <span class="tag">SQL Server</span>
-            <span class="tag">ERP</span>
+            <span class="tag">Python</span>
+            <span class="tag">APIs REST</span>
+            <span class="tag">ADVPL</span>
+            <span class="tag">Análise de dados</span>
             <span class="tag">Infraestrutura</span>
-            <span class="tag">Integrações</span>
-            <span class="tag">Processos fiscais</span>
-            <span class="tag">Fornecedores</span>
+            <span class="tag">Automação</span>
           </div>
         </aside>
       </div>
@@ -324,9 +417,7 @@
         <div class="eyebrow">Experiência aplicada</div>
         <h2 class="section-title">Projetos em destaque</h2>
         <p class="section-intro">
-          Projetos e soluções aplicadas a desafios reais de sistemas empresariais,
-          dados, processos fiscais, integrações e infraestrutura. Os exemplos foram
-          descritos de forma genérica para preservar informações internas.
+          Projetos e soluções aplicadas a desafios técnicos. Abra cada cartão para visualizar um trecho de código ou acesse o arquivo completo no GitHub. Os exemplos são demonstrativos e foram descritos de forma genérica para preservar informações internas.
         </p>
 
         <div class="projects">
@@ -362,6 +453,16 @@
               <span class="tag">API REST</span>
               <span class="tag">Integração</span>
             </div>
+            <details class="code-preview">
+              <summary>Ver trecho de código Python</summary>
+              <pre><code>def consultar_usuario(usuario_id: int):
+    url = f"https://jsonplaceholder.typicode.com/users/{usuario_id}"
+    requisicao = Request(url, headers={"Accept": "application/json"})
+    with urlopen(requisicao, timeout=10) as resposta:
+        return json.loads(resposta.read().decode("utf-8"))</code></pre>
+            </details>
+            <p class="code-note">Trecho ilustrativo. O arquivo completo contém tratamento de erros.</p>
+            <p><a class="button" href="exemplos/integracao-api.py" target="_blank" rel="noopener noreferrer">Abrir código completo no GitHub ↗</a></p>
           </article>
 
           <article class="project">
@@ -379,23 +480,49 @@
               <span class="tag">Auditoria</span>
               <span class="tag">ICMS-ST</span>
             </div>
+            <details class="code-preview">
+              <summary>Ver trecho de código SQL</summary>
+              <pre><code>SELECT
+    D1_FILIAL,
+    D1_DOC,
+    D1_FORNECE,
+    D1_TOTAL
+FROM SD1010
+WHERE D_E_L_E_T_ = ''
+  AND D1_DTDIGIT BETWEEN '20260101' AND '20260131'
+ORDER BY D1_FILIAL, D1_DTDIGIT;</code></pre>
+            </details>
+            <p class="code-note">Consulta demonstrativa para análise de documentos de entrada; validar campos e regras no ambiente-alvo.</p>
+            <p><a class="button" href="exemplos/auditoria-fiscal.sql" target="_blank" rel="noopener noreferrer">Abrir código completo no GitHub ↗</a></p>
           </article>
 
           <article class="project">
             <div class="project-number">PROJETO 04</div>
-            <h3>Diagnóstico de retenções tributárias</h3>
+            <h3>Análise de estoque e custos</h3>
             <p>
-              Consulta de diagnóstico para cruzar notas de saída, pedidos, natureza
-              financeira, TES, produto e cadastro de cliente. A análise destaca
-              indicadores de configuração relacionados a IRRF, PIS, COFINS e CSLL,
-              apoiando a equipe fiscal na investigação de casos sem retenção.
+              Consulta para consolidar quantidade e valor estimado de estoque por filial
+              e produto. O exemplo demonstra agregações SQL e cálculo de valores, com
+              necessidade de validação conforme as regras de custo e estoque do ambiente.
             </p>
             <div class="tag-list">
-              <span class="tag">SQL</span>
+              <span class="tag">SQL Server</span>
               <span class="tag">Protheus</span>
-              <span class="tag">Fiscal</span>
-              <span class="tag">Diagnóstico</span>
+              <span class="tag">Estoque</span>
+              <span class="tag">Agregações</span>
             </div>
+            <details class="code-preview">
+              <summary>Ver trecho de código SQL</summary>
+              <pre><code>SELECT
+    B2_FILIAL,
+    B2_COD,
+    SUM(B2_QATU) AS QUANTIDADE_ESTOQUE,
+    SUM(B2_QATU * B2_CM1) AS VALOR_ESTIMADO
+FROM SB2010
+WHERE D_E_L_E_T_ = ''
+GROUP BY B2_FILIAL, B2_COD;</code></pre>
+            </details>
+            <p class="code-note">O cálculo é estimativo e precisa ser validado conforme as regras de custo, armazém e saldo do ambiente.</p>
+            <p><a class="button" href="exemplos/analise-estoque.sql" target="_blank" rel="noopener noreferrer">Abrir código completo no GitHub ↗</a></p>
           </article>
 
           <article class="project">
@@ -413,6 +540,23 @@
               <span class="tag">CSV</span>
               <span class="tag">Protheus</span>
             </div>
+            <details class="code-preview">
+              <summary>Ver trecho de código ADVPL</summary>
+              <pre><code>User Function ExportaDEF()
+    Local cArquivo := "\\temp\\exportacao_demo.txt"
+    Local cConteudo := "ID;DESCRICAO" + CRLF
+    Local nHandle := FCreate(cArquivo)
+
+    If nHandle &lt; 0
+        MsgStop("Nao foi possivel criar o arquivo.", "Exportacao")
+        Return
+    EndIf
+    FWrite(nHandle, cConteudo)
+    FClose(nHandle)
+Return</code></pre>
+            </details>
+            <p class="code-note">Exemplo demonstrativo; validar caminho e funções de arquivo antes de usar em ambiente Protheus.</p>
+            <p><a class="button" href="exemplos/exportacao-def.prw" target="_blank" rel="noopener noreferrer">Abrir código completo no GitHub ↗</a></p>
           </article>
 
           <article class="project">
@@ -497,12 +641,17 @@
           <div class="eyebrow">Vamos conversar</div>
           <h2 class="section-title">Conecte-se comigo</h2>
           <p>
-            Estou aberto a conexões profissionais, troca de conhecimentos
-            e oportunidades relacionadas à gestão de TI e sistemas empresariais.
+            Estou aberto a conexões profissionais, troca de conhecimentos e oportunidades
+            relacionadas a sistemas empresariais, dados, integrações e infraestrutura.
           </p>
-          <p class="section-intro">
-            Para publicar esta seção, inclua seu e-mail profissional ou o endereço
-            real do seu perfil no LinkedIn.
+          <div class="contact-links">
+            <!-- Troque o endereço abaixo pelo URL exato do seu perfil LinkedIn. -->
+            <a class="contact-link" href="https://www.linkedin.com/in/edervenancio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <!-- Adicione aqui seu telefone profissional/WhatsApp se quiser torná-lo público. -->
+            <a class="contact-link" href="https://wa.me/556993352389" target="_blank" rel="noopener noreferrer">WhatsApp: (69) 99335-2389 ↗</a>
+          </div>
+          <p class="placeholder-note">
+            Entre em contato pelo LinkedIn ou WhatsApp. O link do WhatsApp abre uma conversa diretamente com o número informado.
           </p>
         </div>
       </div>
